@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalTradesDisplay = document.getElementById("totalTrades");
   const recentTradesDisplay = document.getElementById("recentTrades");
   const ctx = document.getElementById("myChart");
+  const historyDateDisplay = document.getElementById("history-date");
+  const historyInstrumentDisplay =
+    document.getElementById("history-instrument");
+  const historyPnLDisplay = document.getElementById("history-PnL");
+  const tableRowsDisplay = document.getElementById("tableRowsDisplay");
 
   closeMenuBtn.addEventListener("click", function () {
     hideMenuBar();
@@ -262,4 +267,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   recentTradesDisplay.innerHTML = instrumentDisplay;
+
+
 });
