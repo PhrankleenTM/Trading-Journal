@@ -15,84 +15,86 @@
     <title>Trade History</title>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <img src="../images/IMG_3425-removebg-preview.png" alt="logo" />
-        <h1>PHRAN<span class="primary">KLEEN</span></h1>
-      </div>
-      <div class="menu">
-        <span class="material-symbols-outlined"> menu </span>
-      </div>
-      <div class="close">
-        <span class="material-symbols-outlined"> close </span>
-      </div>
-    </nav>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="../images/IMG_3425-removebg-preview.png" alt="logo" />
+          <h1>PHRAN<span class="primary">KLEEN</span></h1>
+        </div>
+        <div class="menu">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+        <div class="close">
+          <span class="material-symbols-outlined"> close </span>
+        </div>
+      </nav>
 
-    <div class="center">
-      <div class="menu-sidebar">
-        <a href="../index.html" id="menu-dashboard">
-          <span class="material-symbols-outlined"> dashboard </span>
-          <h3>Dashboard</h3>
-        </a>
-        <a href="../journal/journal.html" id="menu-journal">
-          <span class="material-symbols-outlined"> cards_stack </span>
-          <h3>Journal</h3>
-        </a>
-        <a href="./tradeHistory.html" id="menu-sync">
-          <span class="material-symbols-outlined"> sync </span>
-          <h3>Trade History</h3>
-        </a>
-        <a href="#" id="menu-more">
-          <span class="material-symbols-outlined"> more </span>
-          <h3>More</h3>
-        </a>
-        <a href="#" class="menu-item">
-          <span class="material-symbols-outlined"> logout </span>
-          <h3>Logout</h3>
-        </a>
-      </div>
-      <aside>
-        <div class="sidebar">
-          <a href="#" class="active">
+      <div class="center">
+        <div class="menu-sidebar">
+          <a href="../index.html" id="menu-dashboard">
             <span class="material-symbols-outlined"> dashboard </span>
             <h3>Dashboard</h3>
           </a>
-          <a href="../journal/journal.html">
+          <a href="../journal/journal.html" id="menu-journal">
             <span class="material-symbols-outlined"> cards_stack </span>
             <h3>Journal</h3>
           </a>
-          <a href="./tradeHistory/tradeHistory.html">
+          <a href="./tradeHistory.html" id="menu-sync">
             <span class="material-symbols-outlined"> sync </span>
             <h3>Trade History</h3>
           </a>
-          <a href="#">
+          <a href="#" id="menu-more">
             <span class="material-symbols-outlined"> more </span>
             <h3>More</h3>
           </a>
-          <a href="#">
+          <a href="#" class="menu-item">
             <span class="material-symbols-outlined"> logout </span>
             <h3>Logout</h3>
           </a>
         </div>
-      </aside>
+        <aside>
+          <div class="sidebar">
+            <a href="../index.html" class="active">
+              <span class="material-symbols-outlined"> dashboard </span>
+              <h3>Dashboard</h3>
+            </a>
+            <a href="../journal/journal.html">
+              <span class="material-symbols-outlined"> cards_stack </span>
+              <h3>Journal</h3>
+            </a>
+            <a href="./tradeHistory.html">
+              <span class="material-symbols-outlined"> sync </span>
+              <h3>Trade History</h3>
+            </a>
+            <a href="#">
+              <span class="material-symbols-outlined"> more </span>
+              <h3>More</h3>
+            </a>
+            <a href="#">
+              <span class="material-symbols-outlined"> logout </span>
+              <h3>Logout</h3>
+            </a>
+          </div>
+        </aside>
 
-      <main>
-        <table id="tradeTable">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Instrument</th>
-              <th>P&L</th>
-              <th>Direction</th>
-              <th>Outcome</th>
-              <th>Good/Bad</th>
-            </tr>
-          </thead>
-          <tbody id="tableRowsDisplay">
-            <tr id="tableRows"></tr>
-          </tbody>
-        </table>
-      </main>
+        <main>
+          <table id="tradeTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Instrument</th>
+                <th>P&L</th>
+                <th>Direction</th>
+                <th>Outcome</th>
+                <th>Good/Bad</th>
+              </tr>
+            </thead>
+            <tbody id="tableRowsDisplay">
+              <tr id="tableRows"></tr>
+            </tbody>
+          </table>
+        </main>
+      </div>
     </div>
 
     <script src="../script.js"></script>

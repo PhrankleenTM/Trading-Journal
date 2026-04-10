@@ -1,10 +1,31 @@
-body {
-    margin: 2rem;
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --borderradius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem --box-shadow: 0 2rem 3rem var(var(--color-light));
+  --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 table {
   width: 100%;
-  border-collapse: collapse; /* Merges borders */
+  border-collapse: collapse;
+  margin: 3rem; /* Merges borders */
 }
 th,
 td {
@@ -14,4 +35,37 @@ td {
 }
 tr:nth-child(even) {
   background-color: #f2f2f2; /* Zebra striping */
+}
+
+@media (max-width: 480px) {
+  /* Reset & Prevent Horizontal Overflow */
+  /* Quick fix for horizontal scroll */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    margin: 0 3rem 0 1.5rem;
+    padding: 0 3rem 0 2.2rem;
+    /* box-sizing: border-box; */
+  }
+
+  /* Also good to add */
+  * {
+    box-sizing: border-box; /* Prevents padding/margin from causing overflow */
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3rem; /* Merges borders */
+  }
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping */
+  }
 }
