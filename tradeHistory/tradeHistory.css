@@ -18,54 +18,72 @@
   --border-radius-3: 1.2rem;
 
   --card-padding: 1.8rem;
-  --padding-1: 1.2rem --box-shadow: 0 2rem 3rem var(var(--color-light));
+  --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* === GLOBAL FIX FOR HORIZONTAL SCROLL === */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Make sure main containers don't overflow */
+.container, .center, main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ==================== TABLE FIX ==================== */
 table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
-  margin: 3rem; /* Merges borders */
+  margin: 1.5rem 0;           /* Smaller margin */
 }
-th,
-td {
+
+th, td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px 8px;
   text-align: left;
+  white-space: nowrap;        /* Keeps content in one line */
 }
+
+/* Zebra striping */
 tr:nth-child(even) {
-  background-color: #f2f2f2; /* Zebra striping */
+  background-color: #f2f2f2;
 }
 
-@media (max-width: 480px) {
-  /* Reset & Prevent Horizontal Overflow */
-  /* Quick fix for horizontal scroll */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    /* overflow-x: hidden; */
-    margin: 0 3rem 0 1.5rem;
-    padding: 0 3rem 0 2.2rem;
-    /* box-sizing: border-box; */
-  }
+/* Make the table scrollable horizontally ONLY inside a container (Best solution) */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;           /* This allows scrolling only the table */
+  margin-bottom: 2rem;
+  -webkit-overflow-scrolling: touch;   /* Smooth scrolling on iOS */
+}
 
-  /* Also good to add */
-  * {
-    box-sizing: border-box; /* Prevents padding/margin from causing overflow */
+/* Smaller screens - make text a bit smaller */
+@media (max-width: 1024px) {
+  th, td {
+    padding: 8px 6px;
+    font-size: 0.95rem;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 3rem; /* Merges borders */
-  }
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2; /* Zebra striping */
+}
+
+@media (max-width: 768px) {
+  th, td {
+    padding: 8px 5px;
+    font-size: 0.9rem;
   }
 }
